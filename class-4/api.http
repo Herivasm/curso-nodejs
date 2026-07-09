@@ -1,0 +1,33 @@
+### Get all movies
+GET http://localhost:3000/movies
+
+### Get movie by id
+GET http://localhost:3000/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+
+### Get movies by genre
+GET http://localhost:3000/movies?genre=Drama
+
+### Create a new movie
+POST http://localhost:3000/movies
+Content-Type: application/json
+
+{
+  "title": "Gaspi",
+  "year": 2025,
+  "director": "Lucas",
+  "duration": 120,
+  "poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNK2wwoogKEY3mNLiTT5IIQQk9-nWfNuJzeXSYA9fNTqJJS98wSaaa-NIAXyhBmN225a-ltDimwzxOUuH10yX8PkRoJAKlk9yZfgzNCA-u&s=10",
+  "genre": ["Drama", "Action"],
+  "rate": 8.5
+}
+
+### Update a movie
+PATCH http://localhost:3000/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+Content-Type: application/json
+
+{
+  "title": "Gaspi - Updated"
+}
+
+### Delete a movie
+DELETE http://localhost:3000/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
